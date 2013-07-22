@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://loadingjava.blogspot.in/" elementFormDefault="qualified" attributeFormDefault="qualified"
+       >
+
+    <element name="addRequest">
+    	<complexType>
+    		<sequence>
+    			<element name="operand1" type="decimal"/>
+    			<element name="operand2" type="decimal"/>
+    		</sequence>
+    	</complexType>
+    </element>
+    <element name="addResponse">
+    	<complexType>
+    		<sequence>
+    			<element name="result" type="decimal"/>
+    		</sequence>
+    	</complexType>
+    </element>
+
+    <element name="subtractRequest">
+    	<complexType>
+    		<sequence>
+    			<element name="operand1" type="decimal"/>
+    			<element name="operand2" type="decimal"/>
+    		</sequence>
+    	</complexType>
+    </element>
+    <element name="subtractResponse">
+    	<complexType>
+    		<sequence>
+    			<element name="result" type="decimal"/>
+    		</sequence>
+    	</complexType>
+    </element>		
+
+    <element name="multiplyRequest">
+       	<complexType>
+    		<sequence>
+    			<element name="operand1" type="decimal"/>
+    			<element name="operand2" type="decimal"/>
+    		</sequence>
+    	</complexType>
+    </element>
+    <element name="multiplyResponse">
+    	<complexType>
+    		<sequence>
+    			<element name="result" type="decimal"/>
+    		</sequence>
+    	</complexType>
+    </element>
+
+    <element name="divideRequest">
+        <complexType>
+    		<sequence>
+    			<element name="operand1" type="decimal"/>
+    			<element name="operand2" type="decimal"/>
+    		</sequence>
+    	</complexType>
+    </element>
+    <element name="divideResponse">
+    	<complexType>
+    		<sequence>
+    			<element name="result" type="decimal"/>
+    		</sequence>
+    	</complexType>
+    </element>
+    
+</schema>
