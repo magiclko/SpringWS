@@ -32,7 +32,6 @@ public class TestClient {
 	}
 	
 	public static void consumeService() {
-		System.out.println(TestClient.webServiceTemplate.getDefaultUri());
 		StreamSource source = new StreamSource(new StringReader(MESSAGE));
 		StreamResult result = new StreamResult(System.out);
 		webServiceTemplate.sendSourceAndReceiveToResult(source, result);
