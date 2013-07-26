@@ -17,9 +17,23 @@
 	
     <bean id="messageFactory" class="org.springframework.ws.soap.saaj.SaajSoapMessageFactory"/>
 	
+<!-- 	<bean id="webServiceTemplate" class="org.springframework.ws.client.core.WebServiceTemplate"> -->
+<!-- 		<constructor-arg ref="messageFactory"/> -->
+<!-- 		<property name="defaultUri" value="http://localhost:8080/server-0.0.1-SNAPSHOT/services"/> -->
+<!-- 	</bean> -->
 	<bean id="webServiceTemplate" class="org.springframework.ws.client.core.WebServiceTemplate">
 		<constructor-arg ref="messageFactory"/>
 		<property name="defaultUri" value="http://localhost:8080/server-0.0.1-SNAPSHOT/services"/>
+		<property name="messageSender">
+			<bean class="org.springframework.ws.transport.http.CommonsHttpMessageSender">
+				<property name="credentials">
+					<bean class="org.apache.commons.httpclient.UsernamePasswordCredentials">
+						<constructor-arg value="magiclko"/>
+						<constructor-arg value="magiclko"/>
+					</bean>
+				</property>
+			</bean>
+		</property>
 	</bean>
 
 </beans>
